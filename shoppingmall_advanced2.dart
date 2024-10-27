@@ -349,7 +349,8 @@ void main() {
         stdout.write('정말 종료하시겠습니까? (9를 입력하면 종료): ');
         String? confirmInput = stdin.readLineSync();
         if (confirmInput == '9') {
-          print('이용해 주셔서 감사합니다 ~ 안녕히 가세요 !');
+          print(
+              '${currentUser.id}님 이용해 주셔서 감사합니다 ~ 안녕히 가세요 !'); // 자유 도전기능: 유저 이름 추가
           return;
         } else {
           print('종료하지 않습니다.');
