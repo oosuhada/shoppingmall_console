@@ -1,5 +1,5 @@
 import 'dart:io';
-import '/Users/gabriel/workspace/shoppingmall/shoppingmall/lib/shoppingmall_models.dart';
+import 'shoppingmall_models.dart';
 
 // 자유 도전기능: 로그인 기능 추가2
 class User {

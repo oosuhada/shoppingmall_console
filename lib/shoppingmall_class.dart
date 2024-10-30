@@ -1,6 +1,6 @@
 import 'dart:io';
-import '/Users/gabriel/workspace/shoppingmall/shoppingmall/lib/shoppingmall_models.dart';
-import '/Users/gabriel/workspace/shoppingmall/shoppingmall/lib/authentication.dart';
+import 'shoppingmall_models.dart';
+import 'authentication.dart';
 
 // 필수기능: 쇼핑몰을 정의하기 위한 ShoppingMall 클래스
 class ShoppingMall {

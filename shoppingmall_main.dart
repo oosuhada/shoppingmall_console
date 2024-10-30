@@ -1,7 +1,7 @@
 import 'dart:io';
-import '/Users/gabriel/workspace/shoppingmall/shoppingmall/lib/shoppingmall_models.dart';
-import '/Users/gabriel/workspace/shoppingmall/shoppingmall/lib/shoppingmall_class.dart';
-import '/Users/gabriel/workspace/shoppingmall/shoppingmall/lib/authentication.dart';
+import 'lib/shoppingmall_models.dart';
+import 'lib/shoppingmall_class.dart';
+import 'lib/authentication.dart';
 
 // 메인 함수: 프로그램 진입
 void main() {
