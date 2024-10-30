@@ -30,3 +30,4 @@
     기술 스택
     / 언어: Dart
     / 패러다임: 객체 지향 프로그래밍
+    / 구성: shoppingmall_main.dart + lib폴더
