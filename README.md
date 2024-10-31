@@ -1,33 +1,53 @@
-🛍️ 간단한 쇼핑몰 콘솔 애플리케이션
-  이 쇼핑몰 콘솔 애플리케이션은 Dart로 개발된 간단하지만 기능적으로 풍부한 쇼핑몰 시스템입니다. 사용자는 상품 조회, 장바구니 관리, 로그인 등 다양한 기능을 즐길 수 있습니다.
+# Shopping Mall Console · Dart OOP Practice
 
-🥊 주요 기능
-  🔐 로그인 시스템
-     / 아이디와 비밀번호 변경 기능 제공
-  🛒 상품 관리
-     / 성별, 사이즈별 상품 분류
-     / 상품 추가 및 제거 기능
-     / 동적 상품 코드 생성
-  🛍️ 장바구니 기능
-     / 상품 추가 및 제거
-     / 장바구니 수량 직접 수정
-     / 장바구니 상세 보기
-     / 장바구니 초기화
-     / 최대 구매 수량 제한 (10개)
-      
-📱 메뉴 구성
-   / 상품 목록 보기
-   / 상품 목록 직접 수정하기
-   / 장바구니에 상품 담기
-   / 장바구니에서 상품 빼기
-   / 장바구니 상품 수량 직접 수정하기
-   / 장바구니 상세보기
-   / 장바구니 초기화
-   / 프로그램 종료
-   / 유저이름, 비밀번호 변경 통한 개인화
-      
-  💻 개발자 정보
-    기술 스택
-    / 언어: Dart
-    / 패러다임: 객체 지향 프로그래밍
-    / 구성: shoppingmall_main.dart + lib폴더
+Dart로 만든 초기 콘솔 쇼핑몰 프로젝트입니다. 상품 조회와 장바구니 조작, 간단한 로그인/계정 변경을 구현하면서 **객체 지향 모델링과 콘솔 입력 흐름**을 연습한 기록입니다.
+
+An early Dart console project for practicing **object-oriented modeling, state changes, and interactive CLI flows** through a small shopping-mall domain.
+
+## 한국어
+
+### 구현 기능
+
+- 로그인 및 사용자 이름/비밀번호 변경
+- 상품 목록 조회
+- 성별·사이즈 기준 상품 구분
+- 상품 추가/삭제와 동적 상품 코드
+- 장바구니 추가/삭제
+- 장바구니 수량 직접 변경
+- 장바구니 상세 조회 및 초기화
+- 상품별 최대 구매 수량 제한
+
+### 코드 구조
+
+```text
+shoppingmall_main.dart          # 콘솔 진입점과 메뉴 흐름
+lib/
+├── authentication.dart        # 로그인/계정 관련 로직
+├── shoppingmall_class.dart    # 쇼핑몰 동작과 상태 관리
+└── shoppingmall_models.dart   # 상품/장바구니 도메인 모델
+```
+
+이 저장소는 현재 제품 프로젝트라기보다 Dart를 처음 학습할 때 **클래스 분리, 상태 변경, 사용자 입력 검증**을 직접 구현한 학습 기록으로 유지합니다.
+
+## English
+
+### Implemented features
+
+- Login and basic account credential updates
+- Product browsing and category/size handling
+- Product creation/removal with generated codes
+- Cart add/remove/update flows
+- Cart detail view and reset
+- Maximum purchase-quantity rules
+
+### What this project demonstrates
+
+The project predates my Flutter and full-stack work and is intentionally kept as a small learning artifact. Its value is in showing the transition from single-file exercises toward separated domain models, authentication logic, and mutable application state.
+
+## Run locally
+
+Install the Dart SDK, then run:
+
+```bash
+dart run shoppingmall_main.dart
+```
