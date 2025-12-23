@@ -4,6 +4,14 @@ Dart로 만든 초기 콘솔 쇼핑몰 프로젝트입니다. 상품 조회와 �
 
 An early Dart console project for practicing **object-oriented modeling, state changes, and interactive CLI flows** through a small shopping-mall domain.
 
+<p align="center">
+  <img src=".github/assets/portfolio/terminal-demo.gif" width="100%" alt="Shopping Mall Console interactive terminal demo" />
+</p>
+
+<p align="center">
+  <a href="https://replit.com/github.com/oosuhada/shoppingmall_console"><strong>▶ Run in Replit / 브라우저에서 직접 실행</strong></a>
+</p>
+
 ## 한국어
 
 ### 구현 기능
@@ -51,3 +59,9 @@ Install the Dart SDK, then run:
 ```bash
 dart run shoppingmall_main.dart
 ```
+
+## Try in browser / 브라우저에서 실행
+
+The Replit link above imports this public repository with the Dart runtime configured so the Run action launches the same interactive shopping-mall CLI.
+
+위 **Run in Replit** 링크를 열면 공개 저장소를 브라우저 환경으로 가져오며, Run을 누르면 동일한 쇼핑몰 터미널 프로그램을 직접 조작할 수 있습니다.
