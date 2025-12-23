@@ -1,67 +1,75 @@
-# Shopping Mall Console · Dart OOP Practice
+# Oosu Mall · 우수몰
 
-Dart로 만든 초기 콘솔 쇼핑몰 프로젝트입니다. 상품 조회와 장바구니 조작, 간단한 로그인/계정 변경을 구현하면서 **객체 지향 모델링과 콘솔 입력 흐름**을 연습한 기록입니다.
+**Oosu Mall is the browser-based portfolio evolution of an early Dart shopping mall console project.**
 
-An early Dart console project for practicing **object-oriented modeling, state changes, and interactive CLI flows** through a small shopping-mall domain.
+상품 조회, 장바구니 상태 변경, 로그인과 계정 정보 수정 등을 객체 지향 방식으로 구현했던 초기 Dart CLI를 보존하면서, 같은 도메인 흐름을 현대적인 fashion commerce browser demo로 발전시킨 프로젝트입니다.
 
 <p align="center">
-  <img src=".github/assets/portfolio/terminal-demo.gif" width="100%" alt="Shopping Mall Console interactive terminal demo" />
+  <img src=".github/assets/portfolio/terminal-demo.gif" width="100%" alt="Original Dart shopping mall console interactive terminal demo" />
 </p>
 
 <p align="center">
-  <a href="https://replit.com/github.com/oosuhada/shoppingmall_console"><strong>▶ Run in Replit / 브라우저에서 직접 실행</strong></a>
+  <a href="https://mall.oosu.dev"><strong>▶ Open Oosu Mall / 우수몰 체험하기</strong></a>
 </p>
 
-## 한국어
+## 주요 기능 / Features
 
-### 구현 기능
-
-- 로그인 및 사용자 이름/비밀번호 변경
-- 상품 목록 조회
-- 성별·사이즈 기준 상품 구분
+- 원본 Dart CLI의 로그인 및 계정 정보 변경
+- 상품 목록과 성별·사이즈 기반 탐색
 - 상품 추가/삭제와 동적 상품 코드
-- 장바구니 추가/삭제
-- 장바구니 수량 직접 변경
-- 장바구니 상세 조회 및 초기화
-- 상품별 최대 구매 수량 제한
+- 장바구니 추가/삭제/수량 변경/초기화
+- 상품별 최대 구매 수량 규칙
+- Oosu Mall 웹 데모의 성별·카테고리·사이즈·검색 필터
+- responsive product grid와 mobile navigation
+- 장바구니 합계, empty state, 주문 데모 상태
+- localStorage 기반 장바구니·로그인·계정 상태 유지
+- Playwright 기반 desktop/mobile interaction smoke tests
 
-### 코드 구조
+## Architecture
 
 ```text
-shoppingmall_main.dart          # 콘솔 진입점과 메뉴 흐름
-lib/
-├── authentication.dart        # 로그인/계정 관련 로직
-├── shoppingmall_class.dart    # 쇼핑몰 동작과 상태 관리
-└── shoppingmall_models.dart   # 상품/장바구니 도메인 모델
+shoppingmall_console/
+├── shoppingmall_main.dart          # Original Dart CLI entry point
+├── lib/
+│   ├── authentication.dart         # Login / account logic
+│   ├── shoppingmall_class.dart     # Store and cart state transitions
+│   └── shoppingmall_models.dart    # Product / cart domain models
+└── web/                             # Oosu Mall browser portfolio demo
+    ├── src/
+    ├── tests/                       # Playwright smoke tests
+    ├── package.json
+    └── vite.config.ts
 ```
 
-이 저장소는 현재 제품 프로젝트라기보다 Dart를 처음 학습할 때 **클래스 분리, 상태 변경, 사용자 입력 검증**을 직접 구현한 학습 기록으로 유지합니다.
+원본 Dart 프로젝트는 초기 학습 단계에서 **도메인 모델, 인증 로직, mutable application state, console input validation**을 파일과 클래스로 분리해 본 기록입니다.
 
-## English
+The original Dart CLI documents an early step from single-file exercises toward separated **domain models, authentication logic, mutable application state, and input validation**.
 
-### Implemented features
+## Run the original CLI
 
-- Login and basic account credential updates
-- Product browsing and category/size handling
-- Product creation/removal with generated codes
-- Cart add/remove/update flows
-- Cart detail view and reset
-- Maximum purchase-quantity rules
-
-### What this project demonstrates
-
-The project predates my Flutter and full-stack work and is intentionally kept as a small learning artifact. Its value is in showing the transition from single-file exercises toward separated domain models, authentication logic, and mutable application state.
-
-## Run locally
-
-Install the Dart SDK, then run:
+Dart SDK가 설치된 환경에서:
 
 ```bash
 dart run shoppingmall_main.dart
 ```
 
-## Try in browser / 브라우저에서 실행
+위 terminal GIF는 이 원본 CLI의 실제 interaction을 보여줍니다.
 
-The Replit link above imports this public repository with the Dart runtime configured so the Run action launches the same interactive shopping-mall CLI.
+## Oosu Mall Browser Demo
 
-위 **Run in Replit** 링크를 열면 공개 저장소를 브라우저 환경으로 가져오며, Run을 누르면 동일한 쇼핑몰 터미널 프로그램을 직접 조작할 수 있습니다.
+Live: **https://mall.oosu.dev**
+
+The web app is a **React/TypeScript browser recreation and design evolution** of the original console interaction model. It does not run the Dart CLI source in the browser. Product browsing, cart mutation, authentication state, and account editing are reimplemented for a responsive browser UI and persisted locally in the browser.
+
+우수몰 웹앱은 기존 Dart 소스를 브라우저에서 직접 실행하는 구조가 아니라, **원본 콘솔 프로젝트의 상품·장바구니·로그인 상태 변경 흐름을 React/TypeScript로 재구성한 포트폴리오 버전**입니다. 초기 Dart OOP 학습 기록은 유지하면서, 실제 commerce product에 가까운 정보 위계와 responsive UX를 덧붙였습니다.
+
+### Web validation
+
+```bash
+cd web
+npm install
+npm run lint
+npm run typecheck
+npm run build
+npm run test:e2e
+```

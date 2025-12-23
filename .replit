@@ -1,2 +1,0 @@
-run = "dart run shoppingmall_main.dart"
-entrypoint = "shoppingmall_main.dart"
