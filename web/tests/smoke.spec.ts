@@ -12,7 +12,7 @@ function watchRuntimeErrors(page: Page) {
 test('desktop filters, cart state, quantity, remove, login, and checkout work', async ({ page }) => {
   const errors = watchRuntimeErrors(page);
   await page.setViewportSize({ width: 1440, height: 1000 });
-  await page.goto('/');
+  await page.goto('./');
   await expect(page).toHaveTitle(/Oosu Mall/);
 
   await page.getByTestId('select-category').selectOption('상의');
@@ -33,15 +33,15 @@ test('desktop filters, cart state, quantity, remove, login, and checkout work', 
   await page.getByTestId('button-remove-cart-001').click();
   await expect(page.getByTestId('empty-cart-state')).toBeVisible();
 
-  await page.goto('/account');
+  await page.goto('./account');
   await page.getByTestId('input-login-id').fill('user');
   await page.getByTestId('input-login-password').fill('password');
   await page.getByTestId('button-login').click();
   await expect(page.getByTestId('text-account-id')).toHaveText('user');
 
-  await page.goto('/');
+  await page.goto('./');
   await page.getByTestId('button-add-cart-122').click();
-  await page.goto('/cart');
+  await page.goto('./cart');
   await page.getByTestId('button-checkout').click();
   await expect(page.getByTestId('status-checkout-complete')).toBeVisible();
   expect(errors).toEqual([]);
@@ -50,11 +50,11 @@ test('desktop filters, cart state, quantity, remove, login, and checkout work', 
 test('mobile storefront and cart have no horizontal overflow', async ({ page }) => {
   const errors = watchRuntimeErrors(page);
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto('/');
+  await page.goto('./');
   await expect(page.getByTestId('card-product-001')).toBeVisible();
   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await page.getByTestId('button-add-cart-001').click();
-  await page.goto('/cart');
+  await page.goto('./cart');
   await expect(page.getByTestId('panel-cart-summary')).toBeVisible();
   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   expect(errors).toEqual([]);

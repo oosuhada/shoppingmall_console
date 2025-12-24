@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://mall.oosu.dev"><strong>▶ Open Oosu Mall / 우수몰 체험하기</strong></a>
+  <a href="https://flutter.oosu.dev/shoppingmall_console/"><strong>▶ Open Oosu Mall / 우수몰 체험하기</strong></a>
 </p>
 
 ## 주요 기능 / Features
@@ -57,7 +57,7 @@ dart run shoppingmall_main.dart
 
 ## Oosu Mall Browser Demo
 
-Live: **https://mall.oosu.dev**
+Live: **https://flutter.oosu.dev/shoppingmall_console/**
 
 The web app is a **React/TypeScript browser recreation and design evolution** of the original console interaction model. It does not run the Dart CLI source in the browser. Product browsing, cart mutation, authentication state, and account editing are reimplemented for a responsive browser UI and persisted locally in the browser.
 

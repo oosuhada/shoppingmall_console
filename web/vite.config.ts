@@ -8,6 +8,7 @@ const root = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   root,
+  base: '/shoppingmall_console/',
   plugins: [react(), tailwindcss()],
   resolve: { alias: { '@': path.resolve(root, 'src') } },
   build: { outDir: path.resolve(root, 'dist'), emptyOutDir: true },
