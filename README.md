@@ -74,6 +74,13 @@ npm run build
 npm run test:e2e
 ```
 
-## Topics
+## Architecture & Topics / 아키텍처 및 주제
 
-[`cli`](https://github.com/topics/cli) · [`dart`](https://github.com/topics/dart) · [`ecommerce`](https://github.com/topics/ecommerce) · [`react`](https://github.com/topics/react) · [`shopping-cart`](https://github.com/topics/shopping-cart) · [`typescript`](https://github.com/topics/typescript) · [`vite`](https://github.com/topics/vite) · [`web-app`](https://github.com/topics/web-app) · [`shopping`](https://github.com/topics/shopping) · [`console-app`](https://github.com/topics/console-app) · [`frontend`](https://github.com/topics/frontend) · [`web-development`](https://github.com/topics/web-development) · [`shopping-app`](https://github.com/topics/shopping-app) · [`shoppingmall`](https://github.com/topics/shoppingmall) · [`dart-web`](https://github.com/topics/dart-web) · [`state-management`](https://github.com/topics/state-management)
+**Architecture / 아키텍처**<br>
+[`domain-model`](https://github.com/topics/domain-model) · [`state-management`](https://github.com/topics/state-management) · [`unidirectional-data-flow`](https://github.com/topics/unidirectional-data-flow) · [`component-based-ui`](https://github.com/topics/component-based-ui) · [`client-side-rendering`](https://github.com/topics/client-side-rendering) · [`command-pattern`](https://github.com/topics/command-pattern)
+
+**Project context / 프로젝트 맥락**<br>
+[`cli`](https://github.com/topics/cli) · [`console-app`](https://github.com/topics/console-app) · [`dart-web`](https://github.com/topics/dart-web) · [`ecommerce`](https://github.com/topics/ecommerce) · [`frontend`](https://github.com/topics/frontend) · [`shopping`](https://github.com/topics/shopping) · [`shopping-app`](https://github.com/topics/shopping-app) · [`shopping-cart`](https://github.com/topics/shopping-cart) · [`shoppingmall`](https://github.com/topics/shoppingmall) · [`web-app`](https://github.com/topics/web-app) · [`web-development`](https://github.com/topics/web-development)
+
+**Implementation stack / 구현 스택**<br>
+[`dart`](https://github.com/topics/dart) · [`react`](https://github.com/topics/react) · [`typescript`](https://github.com/topics/typescript) · [`vite`](https://github.com/topics/vite)
